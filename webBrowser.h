@@ -26,8 +26,25 @@ public:
             forwardStack.clear();
         }
     }
-    
 
+    void back()
+    {
+        forwardStack.push(currentUrl);
+        currentUrl = historyStack.pop();
+        cout << "You are navigated back to: " << currentUrl << endl;
+    }
+    
+    void forward()
+    {
+        historyStack.push(currentUrl);
+        currentUrl = forwardStack.pop();
+        cout << "You are navigated forward to: " << currentUrl << endl;
+    }
+
+    string getCurrentUrl()
+    {
+        return currentUrl;
+    }
 };
 
 
