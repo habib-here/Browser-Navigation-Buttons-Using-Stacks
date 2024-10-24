@@ -12,6 +12,11 @@ class stack
     node* top;
     
 public:
+    stack()
+    {
+        top = NULL;
+    }
+
     void push(string s)
     {
         // new node to push
@@ -45,6 +50,20 @@ public:
         }
     }
 
+    void clear()
+    {
+        node* prev = NULL;
+        node* curr = top;
+
+        while(curr)
+        {
+            prev = curr;
+            curr = curr ->next;
+            delete prev;
+        }
+
+        top = NULL;
+    }
 
 };
 

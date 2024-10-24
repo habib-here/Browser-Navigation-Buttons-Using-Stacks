@@ -9,6 +9,7 @@ int main(void)
     t1.push("Second");
     t1.push("Third");
     cout << t1.pop() << endl;
+    t1.clear();
     cout << "Working !" << endl;
     return 0;
 }
