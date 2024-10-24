@@ -10,6 +10,22 @@ class NavigationButtons
     stack forwardStack;
 
 public:
+
+    void visit(string s)
+    {
+        if (currentUrl.length() == 0)
+        {
+            
+            currentUrl = s;
+            return;
+        }
+        else
+        {
+            historyStack.push(currentUrl);
+            currentUrl = s;
+            forwardStack.clear();
+        }
+    }
     
 
 };

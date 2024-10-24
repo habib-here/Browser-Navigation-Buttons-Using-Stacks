@@ -48,6 +48,7 @@ public:
             temp = NULL;
             return data;
         }
+        return "";
     }
 
     void clear()
