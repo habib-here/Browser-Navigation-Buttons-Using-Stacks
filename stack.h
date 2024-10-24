@@ -21,8 +21,8 @@ public:
 
         if(top)
         {
-            temp -> next = top;
-            top = temp;
+            newNode -> next = top;
+            top = newNode;
         }
         else
         {
@@ -35,7 +35,7 @@ public:
     {
         if (top)
         {
-            temp = top;
+            node* temp = top;
             string data = temp -> data;
             if (top-> next)
                 top = top -> next;
